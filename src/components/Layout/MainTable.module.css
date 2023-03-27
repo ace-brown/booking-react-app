@@ -18,7 +18,7 @@
 }
 
 .booking-table-btns {
-  width: 90%;
+  width: 95%;
   margin: 0 auto;
   display: flex;
   gap: 1rem;
@@ -49,9 +49,5 @@
   .booking-table-btns {
     flex-direction: row;
     flex-wrap: nowrap;
-  }
-
-  .booking-table-btns > * {
-    font-size: 0.5rem;
   }
 }
