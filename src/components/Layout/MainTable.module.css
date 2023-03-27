@@ -9,12 +9,12 @@
 }
 
 .header h1 {
-  font-size: 0.5rem;
+  font-size: 1.5rem;
 }
 
 .header img {
-  height: 2rem;
-  width: 2rem;
+  height: 3rem;
+  width: 3rem;
 }
 
 .booking-table-btns {
@@ -25,6 +25,7 @@
   justify-content: space-between;
   flex-direction: column;
   align-items: center;
+  margin-top: 2rem;
 }
 
 .booking-table-btns > * {
@@ -32,6 +33,7 @@
   flex-grow: 1;
   flex-basis: 0;
   width: 60%;
+  font-size: 0.75rem;
 }
 
 @media (min-width: 600px) {
@@ -47,6 +49,9 @@
   .booking-table-btns {
     flex-direction: row;
     flex-wrap: nowrap;
-    margin-top: 2rem;
+  }
+
+  .booking-table-btns > * {
+    font-size: 0.5rem;
   }
 }

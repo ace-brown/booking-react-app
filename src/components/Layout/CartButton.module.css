@@ -1,6 +1,5 @@
 .button {
   cursor: pointer;
-  font: inherit;
   border: none;
   background-color: #2f7972;
   color: white;
@@ -10,6 +9,7 @@
   align-items: center;
   border-radius: 25px;
   font-weight: bold;
+  text-transform: uppercase;
 }
 
 .button:hover,
