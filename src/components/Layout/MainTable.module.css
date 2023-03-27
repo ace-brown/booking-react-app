@@ -1,11 +1,11 @@
 .header {
-  width: 100%;
+  width: 95%;
   height: 5rem;
   color: rgb(0, 0, 0);
   display: flex;
   gap: 1rem;
   align-items: center;
-  padding: 0 2%;
+  margin: 0 auto;
 }
 
 .header h1 {
@@ -25,7 +25,7 @@
   justify-content: space-between;
   flex-direction: column;
   align-items: center;
-  margin-top: 2rem;
+  margin-top: 3rem;
 }
 
 .booking-table-btns > * {
@@ -34,6 +34,10 @@
   flex-basis: 0;
   width: 60%;
   font-size: 0.75rem;
+}
+
+.booking-table-btns--modified {
+  background-color: #9f1c21;
 }
 
 @media (min-width: 600px) {

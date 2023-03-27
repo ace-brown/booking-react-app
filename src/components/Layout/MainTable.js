@@ -15,18 +15,10 @@ const MainTable = (props) => {
         <CartButton className={classes["booking-table-btns--modified"]}>
           Log out
         </CartButton>
-        <CartButton className={classes["booking-table-btns--modified"]}>
-          Reset Password
-        </CartButton>
-        <CartButton className={classes["booking-table-btns--modified"]}>
-          Search Rooms
-        </CartButton>
-        <CartButton className={classes["booking-table-btns--modified"]}>
-          My bookings
-        </CartButton>
-        <CartButton className={classes["booking-table-btns--modified"]}>
-          All Bookings
-        </CartButton>
+        <CartButton>Reset Password</CartButton>
+        <CartButton>Search Rooms</CartButton>
+        <CartButton>My bookings</CartButton>
+        <CartButton>All Bookings</CartButton>
       </div>
     </Fragment>
   );

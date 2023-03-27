@@ -44,7 +44,7 @@ tbody {
   color: #555;
 }
 
-@media screen and (max-width: 600px) {
+@media (max-width: 600px) {
   thead {
     display: none;
   }
@@ -60,19 +60,28 @@ tbody {
   }
 
   td:nth-child(2)::before {
-    content: "Company";
+    content: "Amenities";
   }
 
   td:nth-child(3)::before {
-    content: "Age";
+    content: "Seat Capacity";
   }
 
   td:nth-child(4)::before {
-    content: "Designation";
+    content: "Status";
   }
 
   td:nth-child(5)::before {
-    content: "Hobbies";
+    content: "Free From";
+  }
+  td:nth-child(6)::before {
+    content: "Free Slot";
+  }
+  td:nth-child(7)::before {
+    content: "Current Event";
+  }
+  td:nth-child(8)::before {
+    content: "Next Event";
   }
 
   td {
