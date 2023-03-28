@@ -1,10 +1,33 @@
 import { Fragment } from "react";
+import firebase from "../../config/firebase";
 
-import CartButton from "./CartButton";
 import logo from "../../assests/logo.png";
+import Button from "../UI/Button";
+import image from "../../assests/image001.png";
 import classes from "./MainTable.module.css";
 
-const MainTable = (props) => {
+const MainTable = () => {
+  const sendEmail = firebase.functions().httpsCallable("sendEmail");
+
+  async function sendAuthenticatedEmail() {
+    try {
+      // Use Firebase's authentication APIs to sign in the user.
+      const email = "12jdfj@gmail.com";
+      const password = "5777567";
+      await firebase.auth().signInWithEmailAndPassword(email, password);
+
+      const result = await sendEmail({
+        email: "kabdi9312@gmail.com",
+        subject: "Email from a Firebase function",
+        html: `<p>Hello, here is some <a href="https://example.com">clickable link</a> and a logo picture <img src=${image}></p>`,
+      });
+
+      console.log("Email sent successfully:", result);
+    } catch (error) {
+      console.error("Error sending email:", error);
+    }
+  }
+
   return (
     <Fragment>
       <header className={classes.header}>
@@ -12,13 +35,11 @@ const MainTable = (props) => {
         <h1>Resource Booking</h1>
       </header>
       <div className={classes["booking-table-btns"]}>
-        <CartButton className={classes["booking-table-btns--modified"]}>
-          Log out
-        </CartButton>
-        <CartButton>Reset Password</CartButton>
-        <CartButton>Search Rooms</CartButton>
-        <CartButton>My bookings</CartButton>
-        <CartButton>All Bookings</CartButton>
+        <Button>Log out</Button>
+        <Button onClick={sendAuthenticatedEmail}>Reset Password</Button>
+        <Button>Search Rooms</Button>
+        <Button>My bookings</Button>
+        <Button>All Bookings</Button>
       </div>
     </Fragment>
   );

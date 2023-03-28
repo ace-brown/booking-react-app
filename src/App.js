@@ -1,5 +1,5 @@
 import MainTable from "./components/Layout/MainTable";
-import FlightBoard from "./components/Meals/FlightBoard";
+import FlightBoard from "./components/FlightBoard/FlightBoard";
 
 const App = () => {
   return (
