@@ -27,7 +27,6 @@
   align-items: center;
   margin-top: 3rem;
 }
-
 .booking-table-btns > * {
   flex-shrink: 1;
   flex-grow: 1;
@@ -36,27 +35,8 @@
   font-size: 0.75rem;
 }
 
-.booking-table-btns--modified {
+.booking-table-btns:first-child {
   background-color: #9f1c21;
-}
-
-.button {
-  cursor: pointer;
-  border: none;
-  background-color: #2f7972;
-  color: white;
-  padding: 0.75rem 3rem;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  border-radius: 10px;
-  font-weight: bold;
-  text-transform: uppercase;
-}
-
-.button:hover,
-.button:active {
-  background-color: #2f7972;
 }
 
 @media (min-width: 600px) {
