@@ -7,8 +7,6 @@ import image from "../../assests/image001.png";
 import classes from "./MainTable.module.css";
 
 const MainTable = () => {
-  const sendEmail = firebase.functions().httpsCallable("sendEmail");
-
   async function sendAuthenticatedEmail() {
     try {
       // Use Firebase's authentication APIs to sign in the user.
@@ -16,6 +14,7 @@ const MainTable = () => {
       const password = "5777567";
       await firebase.auth().signInWithEmailAndPassword(email, password);
 
+      const sendEmail = firebase.functions().httpsCallable("sendEmail");
       const result = await sendEmail({
         email: "kabdi9312@gmail.com",
         subject: "Email from a Firebase function",
